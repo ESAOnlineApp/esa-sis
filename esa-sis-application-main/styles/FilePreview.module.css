@@ -1,0 +1,23 @@
+.fileList {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+  width: w-full;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 2px; */
+  border-width: 2px;
+  margin: 2px;
+  padding: 4px;
+}
+
+.fileContainer {
+  flex-direction: column;
+  align-items: center;
+}
+
+.fileName {
+  margin-left: 2rem;
+  width: w-full;
+  align-items: center;
+}

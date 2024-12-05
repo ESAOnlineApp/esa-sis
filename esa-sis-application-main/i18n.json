@@ -1,0 +1,12 @@
+{
+  "locales": [
+    "en-US",
+    "fr"
+  ],
+  "defaultLocale": "en-US",
+  "pages": {
+    "*": [
+      "studentApp"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+/* calendarStyles.css */
+/* Customize the 'today' button */
+.fc-today-button {
+    background-color: red; /* Change to your desired background color */
+    color: white; /* Change to your desired text color */
+  }
+  
+  /* Customize the 'prev' and 'next' buttons */
+  .fc-prev-button,
+  .fc-next-button {
+    background-color: blue; /* Change to your desired background color */
+    color: white; /* Change to your desired text color */
+  }
+  
+  /* Customize the 'title' text */
+  .fc-title {
+    font-size: 24px; /* Change to your desired font size */
+    color: green; /* Change to your desired text color */
+  }
+  
+  /* Customize the buttons within the 'listWeek' dropdown */
+  .fc-listWeek-button {
+    background-color: orange; /* Change to your desired background color */
+    color: white; /* Change to your desired text color */
+  }
+  

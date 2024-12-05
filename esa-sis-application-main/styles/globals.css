@@ -1,0 +1,721 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-background-color: #002857; 
+  --main-hover-color: #12437b; 
+  --main-active-color: #2b6ab3; 
+  --main-text-color: white;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @apply bg-gray-100;
+  background-color: #fff;
+}
+img{
+  height: 100%;
+}
+
+/* a {
+  color: inherit;
+  text-decoration: none;
+} */
+
+a {
+  @apply text-blue-600 hover:text-blue-800;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+/*  Format For Classes */
+.card {
+  @apply mb-5  block   rounded-lg border border-gray-200  shadow-lg;
+}
+
+.primary-button {
+  @apply rounded bg-primary text-white py-2 px-4 shadow outline-none hover:bg-secondary hover:font-bold active:bg-third disabled:bg-gray-400 ;
+}
+
+.cancel-button {
+  @apply rounded bg-gray-500 text-white py-2 px-4 shadow outline-none hover:bg-gray-400 hover:font-bold active:bg-gray-900 disabled:bg-gray-400 ;
+}
+
+.primary-bg{
+  @apply bg-white;
+}
+/* .primary-button {
+  @apply rounded bg-primary py-2 px-4 shadow outline-none hover:bg-secondary  active:bg-third disabled:bg-gray-400;
+} */
+.default-button {
+  @apply rounded bg-gray-100 py-2  px-4 text-black shadow outline-none hover:bg-gray-200  active:bg-gray-300;
+}
+
+input:not([type='file']),
+select,
+textarea {
+  @apply rounded border p-2  outline-none ring-indigo-300  focus:ring;
+}
+
+.dropdown-link {
+  @apply flex p-2 hover:bg-gray-200;
+}
+
+.alert-error {
+  @apply my-3 rounded-lg bg-red-100 p-3 text-red-700;
+}
+
+.alert-success {
+  @apply my-3 rounded-lg bg-green-100 p-3 text-green-700;
+}
+label {
+  width: 250px;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+  line-height: 1.7;
+  overflow: auto;
+  height: auto;
+  padding: 8px;
+}
+.MuiDataGrid-root .MuiDataGrid-cell {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  text-align: center;
+  padding: 5px !important;
+}
+
+.fc-col-header-cell-cushion {
+  color: black;
+}
+.fc-daygrid-day-number {
+  color: black;
+}
+.fc-event-title {
+  margin: 1px;
+  padding-top: 1px;
+  margin-top: 5px;
+  white-space: normal;
+  font-size: 12px;
+}
+.fc-event-time {
+  margin: 1px;
+  padding: 1px;
+  white-space: normal;
+  font-size: 0.9em;
+  width: 3em;
+}
+.fc-day {
+  white-space: normal;
+  font-size: 0.9em;
+}
+.fc-month {
+  white-space: normal;
+  font-size: 0.9em;
+}
+.fc-today-button {
+  background-color: darkgray !important;
+  color: black !important;
+  cursor: pointer;
+}
+.fc-today-button:hover {
+  background-color: darkblue !important;
+  color: white !important;
+}
+.fc-dayGridMonth-button {
+  background-color: darkgray !important;
+  color: black !important;
+  cursor: pointer;
+}
+.fc-dayGridMonth-button:hover {
+  background-color: darkblue !important;
+  color: white !important;
+}
+
+.fc-timeGridWeek-button {
+  background-color: darkgray !important;
+  color: black !important;
+  cursor: pointer;
+}
+.fc-timeGridWeek-button:hover {
+  background-color: darkblue !important;
+  color: white !important;
+}
+.fc-timeGridDay-button {
+  background-color: darkgray !important;
+  color: black !important;
+  cursor: pointer;
+}
+.fc-timeGridDay-button:hover {
+  background-color: darkblue !important;
+  color: white !important;
+}
+
+.fc-button-active {
+  background-color: rgb(46, 46, 218) !important;
+  color: white !important;
+}
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Libre+Franklin:wght@500&family=Montserrat:wght@300&display=swap');
+
+.contentSIS{
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin: auto;
+  padding: 1rem; 
+  padding-right:0;
+  justify-content: center;
+  flex-wrap: nowrap;
+  
+}
+.SISText{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  color: #707070;
+  font-size: 25px;
+  font-family: 'Montserrat';
+  font-weight: 'semi-bold';
+  
+}
+.ContainerCircle{
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+
+  flex-direction: column;
+}
+.circle{
+  flex-wrap: nowrap;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+  text-align: center;
+  
+}
+.ContentText{
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: white;
+
+}
+.circle.blue{
+  margin-right: 1rem;
+ background: var(--main-background-color);
+}
+.circle.gray{
+  margin-right: 1rem;
+ background: darkgray;
+}
+.circle.lightBlue{
+  margin-right: 1rem;
+  background: var(--main-active-color);
+}
+.circle.darkBlue{
+  margin-right: 0;
+ background: #535252;
+}
+
+.log {
+  margin-top: 79px;
+  margin-left: 69px !important;
+}
+.welcomeTo{ 
+  font-family: 'Montserrat';
+  font-size: 30px;
+  color: #707070;
+  letter-spacing: 0px;
+}
+.SIS {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  word-spacing:2px;
+  color: #707070;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+.formDiv{ 
+  margin-left: 69px !important;
+  
+}
+.inputT{ 
+  border-radius: 21px !important;
+  outline: transparent;
+  border: 1px solid #707070;
+  width: 300px !important;
+  overflow: none !important;
+}
+.inputT:focus{ 
+  outline-color: transparent !important;
+}
+.passwordVisibility{
+  margin-left: 270px;
+  margin-top: -35px;
+}
+
+/* .btnCol{ 
+  background-color: #3D709A;
+} */
+
+
+
+@media only screen and (max-width: 500px){
+  .imageRes{ 
+    display: none;
+  }
+  .log{ 
+    margin-left: 50px;
+    font-size: 200px;
+  }
+  .welcomeTo{ 
+    font-family: 'Montserrat';
+    font-size: 30px;
+    color: #707070;
+    letter-spacing: 0px;
+    margin-left: inherit;
+    margin-top: 13rem;;
+  }
+  .SIS{ 
+    position: absolute;
+    margin-top: 0px;
+  }
+  .btn{ 
+    margin-bottom: 20px;
+  }
+  .circle.darkBlue{
+    margin-right: -2rem;
+  }
+  .circle.blue{
+    margin-left: 2rem;
+  }
+ 
+}
+@media only screen and (max-width: 400px){
+  .imageRes{ 
+    display: none;
+  }
+  .log{ 
+    margin-left: 50px;
+    font-size: 200px;
+  }
+  .welcometoSis { 
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 50px;
+  }
+  .SIS{ 
+    margin-top: 0;
+    margin-left: inherit;
+   }
+  .circle.darkBlue{
+    margin-right: -2.5rem;
+  }
+  .circle.blue{
+    margin-left: 4rem;
+  }
+
+  .contentSIS{
+    margin-top: 2rem;
+   }
+   .SISText{
+    margin-top: 4rem;
+   }
+  
+  
+}
+.formContent{
+  display: flex;
+    justify-content: center;
+}
+@media only screen and (max-width: 500px){
+ .esaLogo{ 
+  margin: auto;
+ } 
+ .welcometoSis{ 
+  position: absolute;
+  margin-top: 120px;
+ }
+ .SIS{ 
+  margin-top: 0;
+  margin-left: inherit;
+ }
+ .login{ 
+  margin:0;
+  margin-left: 60px !important;
+ }
+ .error{ 
+  margin-left: 30px !important;
+ }
+ .contentSIS{
+  margin-top: 2rem;
+ }
+ .SISText{
+  margin-top: 4rem;
+ }
+
+
+ 
+}
+
+/* Change the background color of the previous button (left arrow) */
+.fc .fc-button-primary {
+  background-color: var( --main-background-color);
+}
+.fc-today-button{
+  background-color: var(--main-background-color) !important;
+  color: var(--main-text-color) !important;
+  cursor: pointer;
+}
+.fc-today-button:hover{
+  background-color: var(--main-hover-color) !important;
+  color: var(--main-text-color) !important;
+  cursor: pointer;
+}
+.fc-timeGridWeek-button {
+  background-color: var(--main-background-color) !important;
+  color: var(--main-text-color) !important;
+  cursor: pointer;
+}
+.fc-timeGridWeek-button:hover {
+  background-color: var(--main-hover-color) !important;
+  color: var(--main-text-color) !important;
+  cursor: pointer;
+}
+
+.fc-timeGridDay-button {
+  background-color: var(--main-background-color) !important;
+  color: var(--main-text-color) !important;
+  cursor: pointer;
+}
+.fc-timeGridDay-button:hover {
+  background-color: var(--main-hover-color) !important;
+  color: var(--main-text-color) !important;
+  cursor: pointer;
+}
+.fc-button-active {
+  background-color: var(--main-background-color) !important;
+  color: var(--main-text-color) !important;
+}
+.fc-button-active:hover{
+  background-color: var(--main-hover-color) !important;
+  color: var(--main-text-color) !important;
+}
+.fc-today-button:active{
+  background-color: var(--main-hover-color) !important;
+  color: var(--main-text-color) !important;
+  cursor: pointer;
+}
+.fc .fc-button-primary:hover{
+  background-color: var(--main-hover-color);
+  color: var(--main-text-color) !important;
+}
+.fc .fc-button-primary:active{
+  background-color: var(--main-active-color);
+}
+.fc .fc-today-button .fc-button .fc-button-primary{
+  background-color: var(--main-background-color);
+}
+.fc .fc-today-button .fc-button .fc-button-primary:hover{
+  background-color: var(--main-hover-color);
+}
+
+.fc-listWeek-button .fc-button .fc-button-primary{
+    background-color: var(--main-background-color);
+}
+.fc-dayGridMonth-button {
+  background-color: var(--main-background-color) !important;
+  color: var(--main-text-color) !important;
+  cursor: pointer;
+}
+.fc-dayGridMonth-button:hover {
+  background-color: var(--main-hover-color) !important;
+  color: var(--main-text-color) !important;
+}
+.fc-dayGridMonth-button:active {
+  background-color: var(--main-background-color) !important;
+  color: var(--main-text-color) !important;
+}
+
+.fc .fc-button-primary:focus {
+  box-shadow: none;
+}
+.fc .fc-button:focus {
+  box-shadow: none;
+  outline: 0px;
+}
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus, .fc .fc-button-primary:not(:disabled):active:focus {
+  box-shadow: none;
+}
+.fc-daygrid-day-content {
+  display: inline-block; /* Display content as inline-block */
+  width: 60rem; /* Set width to auto to expand based on content */
+}
+
+.fc-timegrid-event,.fc-event-time {
+  width: auto;
+  font-size: var(--fc-small-font-size);
+  margin-bottom: 1px;
+  white-space: nowrap;
+}
+/* styles.css */
+
+.tooltip {
+  position: absolute;
+  z-index: 9999;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  max-width: 300px; /* Adjust the max-width as needed */
+}
+
+.tooltip-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tooltip-content button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.tooltip-content button:hover {
+  color: #f00; /* Change color on hover as desired */
+}
+
+.contentDiv{
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+
+  flex-direction: row;
+}
+.rightContent{
+  padding: auto;
+  text-align: center;
+}
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  @apply bg-gray-100;
+  background-color: #fff;
+}
+
+.imageRes {
+  max-width: 100%;
+  height: auto;
+}
+
+.esaLogo {
+  max-height: 100%;
+}
+
+.log {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.welcometoSis {
+  margin-left: 1rem;
+  font-size: 2rem;
+  color: #707070;
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+
+.SIS {
+  font-size: 1.5rem;
+  color: #707070;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.login {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3D709A;
+  cursor: pointer;
+}
+
+.contentSIS {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 1rem;
+}
+
+.SISText {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #707070;
+  font-size: 2rem;
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+
+.ContainerCircle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--main-background-color);
+  margin-bottom: 1rem;
+}
+
+.ContentText {
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  text-align: center;
+}
+
+.rightContent {
+  max-width: 300px;
+  margin-left: 1rem;
+  font-size: 1.25rem;
+  color: #000;
+  font-family: 'Montserrat';
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 768px) {
+  .ContainerCircle {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .circle {
+      margin-right: 0;
+  }
+
+  .rightContent {
+      margin-left: 0;
+      margin-top: 1rem;
+      text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .ContainerCircle {
+    flex-direction: column;
+
+    align-items: center;
+}
+.contentDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+  .imageRes {
+      display: none;
+  }
+  .circle{
+    margin-left: 4rem;
+  }
+
+  .log {
+      margin-top: 1.5rem;
+      justify-content: center;
+  }
+
+  .welcometoSis {
+      margin-left: 0;
+      margin-top: 1rem;
+      text-align: center;
+      white-space: nowrap;  /* Ensures the text stays on one line */
+  }
+
+  .SIS {
+      margin-top: 0.5rem;
+      text-align: center;
+      font-size: medium;
+  }
+
+
+
+  .SISText {
+    margin-top: 8rem;  
+    margin-bottom: 2rem; 
+    text-align: center;
+    white-space: nowrap;  /* Ensures the text stays on one line */
+}
+
+}
+.textContent{
+  text-align: center;
+
+
+}
+.textContent.blue{
+  color: var(--main-background-color);
+
+}
+
+.textContent.gray{
+  color:#707070
+
+}
+
+.textContent.gray{
+  color:#707070
+
+}
+.textContent.lightBlue{
+  color: var(--main-active-color);
+}
+.rightContent.darkBlue{
+  color: #333;
+}
+
+
